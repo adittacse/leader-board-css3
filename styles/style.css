@@ -60,10 +60,6 @@ hr {
 }
 
 /* top blogs styles */
-.top-blogs {
-    /*padding: 30px;*/
-}
-
 .blogs {
     margin-top: 30px;
     display: grid;
@@ -147,4 +143,41 @@ hr {
     background: #FEE5DF;
     color: #ED6B4F;
     border-radius: 15px;
+}
+
+/* media queries */
+/* mobile device */
+@media only screen and (max-width: 688px) {
+    .container {
+        width: 100%;
+    }
+
+    .players, .blogs, .courses {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .player, .blog {
+        flex-direction: column;
+    }
+}
+
+/* tablet, ipad devices */
+@media only screen and (min-width: 689px) and (max-width: 992px) {
+    main {
+        align-items: center;
+    }
+    .container {
+        width: 100%;
+    }
+
+    .players, .blogs {
+        grid-template-columns: repeat(2, 1fr);
+        /*align-items: center;*/
+        justify-content: center;
+    }
+
+    .courses {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
 }
